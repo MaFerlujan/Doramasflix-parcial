@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doramasflix</title>
+    <link rel="stylesheet" href="pantalla_pelicula.css">
+</head>
+<body>
+    <aside class="background--banner">
+        <img src="https://pic7.iqiyipic.com/image/20240831/01/3b/a_100585282_m_601_en_1080_608.jpg" alt="Imagen background">
+        <div class="banner">
+            <div class="menu">
+                <nav>
+                    <ul class="navegacion navegacion--izquierda">
+                        <li class="logo"><img src="Imagenes/doramasflix_logo.webp" alt="logo"></li>
+                        <li><a href="#">Explorar ⏷</a></li>
+                        <li><a href="#">Doramas</a></li>
+                        <li><a href="#">Películas</a></li>
+                        <li><a href="#">TV Shows</a></li>
+                        <li><a href="#">Filtros</a></li>
+                        <li><a href="#">Más</a></li>
+                        <li><ion-icon name="logo-android"></ion-icon><a href="#"> APP MÓVIL</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul class="navegacion navegacion--derecha">
+                        <button class="boton-iniciar-sesion">
+							Iniciar Sesión
+							</button>
+							<span class="icono-lupa">
+								<img src="Imagenes/lupa.svg" alt="">
+							</span>
+                    </ul>
+                </nav>
+            </div>
+			<div class="imagotipo">
+				<div class="imagotipo--contenido">
+					<div class="imagotipo--imagen">
+						<img src="https://image.tmdb.org/t/p/w342//rPMg4IWyFQb9Aoj1Y2oH7wAblMI.jpg" alt="Imagotipo">
+					</div>
+					<div class="informacion-pelicula"> 
+						<h1 class="titulo">Affair</h1> 
+						<h3 class="subtitulo">รักเล่นกล</h3> 
+						<h3 class="subtitulo">Drama Romance</h3> 
+						<p class="capitulos">2024     Tailandia      0h/ep</p>  
+						<p class="capitulos">4 capítulos</p>  
+					</div>
+				</div>
+			</div>			
+                <div class="descripción">
+                    <p><b>Ver Affair online: </b>(GL) ‘Siang Plaing’ y ‘Wan Wanviwah’ han crecido en el mismo hogar, pero con diferente estatus. Plaing es la hija del dueño de la casa, mientras que Wan trabaja en la casa. Aunque nunca quieren separarse, un día, Wan le dice a Plaing que ...</p>
+                </div>
+                <div class="imagotipo--info">
+                    <p><ion-icon name="caret-forward-circle-outline"></ion-icon> Ver ahora</p>
+                    <p><ion-icon name="desktop-outline"></ion-icon></p> </div>
+                  
+                  <div id="trailerModal" class="modal">
+                    <span class="close">&times;</span>
+                    <iframe id="trailerModalIframe" src=""></iframe>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main class="catalogos">
+        <section class="catalogo--peliculas">
+            <h1>EPISODIOS</h1>
+            <div class="DORAMAS" id="episodios">
+            </div>
+        </section>
+        <section class="catalogo--peliculas">
+            <h2>DETALLES</h2>
+            <div class="DORAMAS" id="detalles">
+                <h1>Sinopsis</h1>
+                <p>(GL) ‘Siang Plaing’ y ‘Wan Wanviwah’ han crecido en el mismo hogar, pero con diferente estatus. Plaing es la hija del dueño de la casa, mientras que Wan trabaja en la casa. Aunque nunca quieren separarse, un día, Wan le dice a Plaing que eventualmente tendrá que casarse. Plaing planea encontrar un buen hombre para Wan para evitar que esté sola. Sin embargo, este plan hace que Plaing se dé cuenta de sus propios sentimientos hacia Wan. Mientras su amor se hace más fuerte, Plaing pierde a sus padres debido a un fracaso comercial y escapa, dejando solo una carta de amor para Wan. Más tarde, se reencuentran, pero Wan está comprometida.</p>
+                <div class="etiquetas">
+                    <h3>Etiquetas</h3>
+                    <button class="etiqueta">Juvenil</button>
+                    <button class="etiqueta">Amistad</button>
+                    <button class="etiqueta">Escolar</button>
+                    <button class="etiqueta">LGBT</button>
+                    <button class="etiqueta">GL</button>
+                    <button class="etiqueta">Melodrama</button>
+                </div>
+                  
+                <div class="generos">
+                    <h3>Géneros</h3>
+                    <button class="genero">Drama</button>
+                    <button class="genero">Romance</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer--contenedor">
+            <div class="informacion">
+                <p><a href="#">DCMA</a></p>
+                <p><a href="#">Preguntas frecuentes</a></p>
+                <p><a href="#">Preferencias de cookies</a></p>
+                <p><a href="#">Términos y condiciones</a></p>
+            </div>
+            <ul class="iconos">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://x.com/doramasflixgo"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://www.instagram.com/doramasflixgo/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="https://www.tiktok.com/@doramasflixgo"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+            </ul>
+            <p class="idioma">🌎︎ Español</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
