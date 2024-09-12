@@ -190,23 +190,23 @@ contenido.forEach((e, index) => {
 let results = document.getElementById('results');
 let btnModal = document.getElementById('btn-modal');
 
-btnModal.addEventListener('click', ()=>{
+btnModal.addEventListener('click', () => {
     console.log('evento on click cargado');
 
 
-    setTimeout(()=>{
+    setTimeout(() => {
         let search = document.getElementById('search');
-        search.addEventListener('input',(e)=>{
+        search.addEventListener('input', (e) => {
             let input = e.target.value.toLowerCase();
             console.log(input);
 
-            
-            function imprimirResultados(contentData, index){
-                results.innerHTML +=`
+
+            function imprimirResultados(contentData, index) {
+                results.innerHTML += `
                     <div class="results">
                         <img class="modal-img" src="${contentData.image}" alt="">
                         <div class="modal-text">
-                          <h5>${contentData.title}</h5>
+                          <a href="pantalla_peliculas.html?title=${contentData.title}" target="_blank"><h5>${contentData.title}</h5></a>
                           <div class="result-info">
                           <p>${contentData.rate}</p>
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -219,18 +219,27 @@ btnModal.addEventListener('click', ()=>{
                       </div>
                 `;
             }
-            
-            function refreshResults(){
+
+            function refreshResults() {
                 results.innerHTML = "";
-                contenido.forEach((e,index)=>{
-                    if (e.title.toLowerCase().includes(input) || e.genre.toLocaleLowerCase().includes(input)){
+                let searchbar = false;
+                contenido.forEach((e, index) => {
+                    if (e.title.toLowerCase().includes(input) || e.genre.toLocaleLowerCase().includes(input)) {
                         imprimirResultados(e, index);
+                        searchbar = true;
                     }
                 });
+                if (!searchbar) {
+                    results.innerHTML = `
+                        <div class="results">
+                            <p>No se encontraron resultados.</p>
+                        </div>
+                    `;
+                }
             }
-            
-            refreshResults();
-    });     
 
-},500);
+            refreshResults();
+        });
+
+    }, 500);
 });
