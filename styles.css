@@ -102,6 +102,7 @@ button {
 }
 
 /*ESTILOS MODAL*/
+
 form {
     width: 100%;
     border: 0;
@@ -154,7 +155,9 @@ input {
     font-size: 18px;
     font-weight: 700;
 }
-
+.results .modal-text h5:hover {
+    color: var(--rojo);
+}
 .results .modal-text {
     margin-left: 30px;
 }
